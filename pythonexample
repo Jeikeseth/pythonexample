@@ -1,8 +1,11 @@
-score = input(" Enter Score: ")
-try:
-    raw = float(score)
-except: 
-    raw = ('Out of range')
+#made some exception handling code now it will ask for input again when string is entered
+while(1):
+    score = input(" Enter Score: ")
+    try:
+        raw=float(score)
+        break
+    except (TypeError,ValueError):
+        continue
 if raw >= 0.9 :
     print('A')
 elif raw >= 0.8 :
